@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Zachary's Awesome Rollercoster</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body style="text-align: center">
+    <h1>Zachary's Awesome Rollercoster</h1>
+    <p>This website is going to be awesome!</p>
+    <p>It is going to tell you about my asome roller coster that I built.</p>
+
+    <img width="500" height="500" src="roller.png" />
+
+    <h1>My First Program</h4>
+    <button id="button">Say Hello to Me</button>
+    <input id="name" type="text"></input>
+
+    <h1>My Video</h4>
+    <video controls>
+      <source src="roller-movie.m4v" />
+    </video>
+    <footer>
+      &copy; 2015 This is website was created by Zachary
+    </footer>
+  </body>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#button").on('click', function() {
+        var name = $("#name").val();
+        var msg = new SpeechSynthesisUtterance("say hello to " + name);
+        msg.lang = "en-US";
+        window.speechSynthesis.speak(msg);
+      });
+    });
+  </script>
+
+</html>
